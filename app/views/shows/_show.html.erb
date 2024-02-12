@@ -1,0 +1,16 @@
+<div class="card my-3" style="width: 70rem;">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-4">
+        <%= image_tag url_for(show.movie.image), class: 'thumbnail w-100' %>
+      </div>
+      <div class="col-8">
+        <h5 class="card-title"><%= show.movie.title %></h5>
+        <p class="card-text">Start time:- <%= show.start_time.to_time.strftime("%I:%M %p") %></p>
+        <p class="card-text">End time:-<%= show.end_time %></p>
+        <p class="card-text">Total seats:- <%= show.total_seats %></p>
+        <p class="card-text">Available seats:- <%= show.available_seats %></p>
+      </div>
+    </div>
+  </div>
+</div>

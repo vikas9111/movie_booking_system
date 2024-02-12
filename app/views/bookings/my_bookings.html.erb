@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>My Bookings</h1>
+
+<div id="bookings">
+  <% if @my_bookings.present? %>
+    <% @my_bookings.each do |booking| %>
+      <%= render booking %>
+    <% end %>
+  <% else %>
+    <h3 class="text-center mt-5">No Booking Found!</h3>
+  <% end %>  
+</div>

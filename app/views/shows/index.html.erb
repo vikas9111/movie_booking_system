@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Shows</h1>
+
+<% if can? :manage, Show %>
+  <%= link_to "Add Shows", new_show_path, class: "btn btn-info" %>
+<% end %>
+
+<div id="shows">
+  <% if @shows.present? %>
+    <% @shows.each do |show| %>
+      <%= link_to show, class: "card-link text-decoration-none" do %>
+        <%= render show %>
+      <% end %>
+    <% end %>
+  <% else %>
+    <h3 class="text-center mt-5">No Show Found!</h3>
+  <% end %>
+</div>

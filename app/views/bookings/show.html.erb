@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @booking %>
+
+<div>
+  <%= button_to "Delete booking", @booking, method: :delete, class: "btn btn-danger" %>
+  <%= link_to "Back to Movies", movies_path, class: "btn btn-primary my-3" %>
+</div>
